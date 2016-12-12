@@ -32,7 +32,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
@@ -40,22 +40,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.home', {
+    url: '/home',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-home': {
+        templateUrl: 'templates/tab-home.html',
+        controller: 'HomeCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.classify', {
+      url: '/classify',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-classify': {
+          templateUrl: 'templates/tab-classify.html',
+          controller: 'ClassifyCtrl'
         }
       }
     })
@@ -68,6 +68,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+
+  .state('tab.shoppingCart', {
+    url: '/shoppingCart',
+    views: {
+      'tab-shoppingCart': {
+        templateUrl: 'templates/tab-shoppingCart.html',
+        controller: 'shoppingCartCtrl'
+      }
+    }
+  })
 
   .state('tab.account', {
     url: '/account',
