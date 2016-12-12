@@ -1,1 +1,39 @@
 /* Empty. Add your own CSS if you like */
+#tour-view .slider{
+	height:100%;
+}
+#tour-view .slider-silde{
+	padding-top: 100px;
+	text-align: center;
+	height: 150px;
+}
+#tour-view .icon-slide{
+	display: inline;
+}
+.bot {
+    padding: 1em 0;
+}
+.for-left{
+  margin-right:150px;
+  margin-left:15px;
+}
+.for-left h4{ 
+  font-size:1.2em;
+}
+.for-left h4 a{
+  color:#333;
+}
+.for-left h4 a:hover{
+  color:#08287f;
+}
+.for-left p{
+  padding-top:15px;
+  font-size:1em;
+  color:#e2003f;
+}
+.for-right{
+  width:86px;
+  float:right;
+  margin-right:15px;
+  text-align:right;
+}

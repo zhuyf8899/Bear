@@ -31,9 +31,44 @@ angular.module('starter.services', [])
     face: 'img/mike.png'
   }];
 
+  var goods = [{
+    id: 0,
+    price: 100,
+    name: '袋鼠',
+    description: '澳洲典型的一种常见袋鼠，外形和内在酷似美国知名电影明星比利·海灵顿。其肌肉发达，可食用。',
+    picture: 'img/daishu.jpg'
+  }, {
+    id: 1,
+    price: 2333333333,
+    name: '考拉',
+    description: '澳洲典型的一种常见树袋熊，外形和内在酷似中国知名电影明星佟大为（暗黑）。其肌肉因为长期睡觉发达，可食用。',
+    picture: 'img/kaola.jpg'
+  },{
+    id: 2,
+    price: 0.2333333,
+    name: '袋狼',
+    description: '澳洲典型的一种不常见的狼，外形和内在酷似日本知名电影明星东尼大木。其肌肉发达，肚子上有个袋，可食用。',
+    picture: 'img/dailang.jpg'
+  },{
+    id: 0,
+    price: 666666,
+    name: '鸭嘴兽',
+    description: '澳洲典型的一种常见卵生哺乳动物，外形和内在酷似中国知名配音明星葛平。其肌肉不知道是否发达，可食用。',
+    picture: 'img/yazuishou.jpg'
+  },{
+    id: 0,
+    price: 100,
+    name: '淡水鳄',
+    description: '澳洲典型的一种常见鳄鱼，外形和内在酷似美国知名骷髅会成员美国圣地亚哥集团总裁兼金坷垃研发总设计师威廉伯爵。其肌肉发达，可食用。',
+    picture: 'img/eyu.jpg'
+  },];
+
   return {
     all: function() {
       return chats;
+    },
+    allGoods:function() {
+      return goods;
     },
     remove: function(chat) {
       chats.splice(chats.indexOf(chat), 1);

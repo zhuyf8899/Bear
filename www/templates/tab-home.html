@@ -1,17 +1,47 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="小熊家的宝贝">
+<ion-nav-buttons side="left">
+  <a class="button" href="" nav-clear>leftButton</a>
+</ion-nav-buttons>
   <ion-content class="padding">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      For help sending push notifications, join the <a href="https://apps.ionic.io/signup" target="_blank">Ionic Platform</a> and check out <a href="http://docs.ionic.io/docs/push-overview" target="_blank">Ionic Push</a>. We also have other services available.
-    </p>
+    <ion-slide-box show-pager="true" id="tour-view">
+      <!--<ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="ind in index" type="item-text-wrap" href="#/tab/details/{{ind.id}}">
+        <ion-slide>
+          <img ng-src="{{index.slide}}" style="width: 98%; height: 100px">
+        </ion-slide>
+      
+      </ion-item>-->
+      <ion-slide ng-repeat="chat in chats" type="item-text-wrap">
+          <img ng-src="{{chat.face}}" style="width: 100%; height: 100px">
+      </ion-slide>
+      
+    </ion-slide-box>
+    
+  <ion-list>
+    <ion-list-header>
+      最新推荐
+    </ion-list-header>
+    <ion-item ng-repeat="aGood in goods" type="item-text-wrap">
+          <a class="a_img" href="">
+            <img ng-src="{{aGood.picture}}" style="width:100%;"/>
+          </a>
+          <div class="bot">
+            <h5>{{aGood.name}}</h5>
+            <pre>{{aGood.description}}</pre>
+          </div>
+          <div class="bot">
+            <div class="for-right">
+               <i class="icon ion-ios-cart-outline"></i>
+
+            </div>
+            <div class="for-left">
+              <h4><a href="" title="{{aGood.price}}" style="color: #0b2c88;text-decoration: none;">￥{{aGood.price}}</a></h4>
+              
+            </div>
+          </div>
+    </ion-item>
+        
+  </ion-list>
+  
+
   </ion-content>
 </ion-view>
